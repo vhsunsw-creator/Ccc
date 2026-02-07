@@ -1,0 +1,132 @@
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#ffd6e8;
+  overflow:hidden;
+}
+
+.page{
+  display:none;
+  min-height:100vh;
+  padding:20px;
+  text-align:center;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+.page.active{
+  display:flex;
+}
+
+h1,h2,p{
+  color:#ff4f87;
+}
+
+/* Emoji background */
+.emoji-bg{
+  background:#ffd6e8;
+  background-image:
+    radial-gradient(#ffb6c1 1px, transparent 1px),
+    radial-gradient(#ffc0cb 1px, transparent 1px);
+  background-size:40px 40px;
+}
+
+/* Video */
+.video-page{
+  position:relative;
+}
+
+.bg-video{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:blur(3px);
+  opacity:0.45;
+  z-index:-1;
+}
+
+/* Letter */
+.letter{
+  background:white;
+  padding:20px;
+  border-radius:18px;
+  max-width:340px;
+  white-space:pre-line;
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+.long{
+  font-size:14px;
+}
+
+/* Gift + polaroid */
+.gift-box{
+  font-size:70px;
+  cursor:pointer;
+}
+
+.gift-box p{
+  font-size:14px;
+}
+
+.polaroid{
+  background:white;
+  padding:10px;
+  width:260px;
+  border-radius:6px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  animation:popIn .8s ease forwards;
+}
+
+.polaroid img{
+  width:100%;
+}
+
+.polaroid p{
+  margin-top:8px;
+  color:#333;
+}
+
+.hidden{display:none;}
+
+@keyframes popIn{
+  from{transform:scale(.5) rotate(-8deg);opacity:0}
+  to{transform:scale(1) rotate(0);opacity:1}
+}
+
+/* Hearts */
+.heart{
+  position:fixed;
+  font-size:20px;
+  animation:floatUp 2s ease forwards;
+}
+
+@keyframes floatUp{
+  from{transform:translateY(0);opacity:1}
+  to{transform:translateY(-120px);opacity:0}
+}
+
+/* Voice */
+.voice{
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  max-width:320px;
+}
+
+/* ✅ NEXT BUTTON – FIXED */
+#next{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  padding:12px 20px;
+  border:none;
+  border-radius:25px;
+  background:#ff4f87;
+  color:white;
+  font-size:14px;
+  z-index:9999; /* IMPORTANT */
+}
